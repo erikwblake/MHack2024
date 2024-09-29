@@ -16,8 +16,12 @@ if st.button("Submit"):
             st.write("Login Successful")
             if result["type"] == "patient":
                 st.write("Redirecting to patient portal")
+                st.experimental_set_query_params(page="home_patient")  # Change the URL to patient
+                st.experimental_rerun()
             elif result["type"] == "institution":
                 st.write("Redirecting to institution portal")
+                st.experimental_set_query_params(page="home_institution")  # Change the URL to institution portal
+                st.experimental_rerun()
         else:
             st.write("Passwords don't match")
     else:

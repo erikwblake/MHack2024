@@ -1,4 +1,4 @@
-staimport streamlit as st
+import streamlit as st
 
 st.title("Create New User")
 name = st.text_input("Enter New Username")
